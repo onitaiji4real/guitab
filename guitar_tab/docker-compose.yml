@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  guitab_backend:
+    build:
+      context: ./backend # 替換成你的後端程式碼所在的目錄
+    ports:
+      - "8877:8877" # 映射容器的 8877 埠到主機的 8877 埠
+    restart: always # 總是在容器退出時重新啟動
+
+  guitab_frontend:
+    build:
+      context: ./my-app # 替換成你的前端程式碼所在的目錄
+    ports:
+      - "3000:3000" # 映射容器的 3000 埠到主機的 3000 埠
+    restart: always # 總是在容器退出時重新啟動

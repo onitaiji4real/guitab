@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h3{
+    color:#2e862f;
+    font-size: 20px;
+    font: bold;
+}
+.nav-bar{
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    align-items: center;
+    height: 65px;
+    top: 0px;
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    .logo-img{
+        display: none; //for mobile
+        width: 110px;
+        height: 50px;
+        @media(min-width:1024px){
+            display:initial;
+        }
+      
+        img{
+            
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .brand-title{
+        width: 110px;
+        font-size: 32px;
+        font-family: AwakeTheBeauty-gxJ5q;
+        font-family: Olivade-gxL6q;
+        font-family: Silverlining-OVjwo;
+        color: #34e537;
+        text-align: center;
+        align-items: center;
+        letter-spacing: 3px;
+    }
+    .link-area{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        @media(min-width:1024px){
+            width: 10%;
+        }
+
+        .item-page{
+            outline: none;
+            border: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.1);
+            
+            color: #2bb62d;
+          
+            font: bold;
+            &:hover{
+                border-bottom: solid#2bb62d;
+                // transition:  3s ease;
+            }
+        }
+    }
+}
+@font-face{
+    font-family: 'AwakeTheBeauty-gxJ5q';
+    src: url('../font/AwakeTheBeauty-gxJ5q.ttf')format('truetype');
+}
+@font-face{
+    font-family: 'Olivade-gxL6q';
+    src: url('../font/Olivade-gxL6q.otf')format('opentype');
+}
+@font-face{
+    font-family: 'Silverlining-OVjwo';
+    src: url('../font/Silverlining-OVjwo.otf')format('opentype');
+}
+

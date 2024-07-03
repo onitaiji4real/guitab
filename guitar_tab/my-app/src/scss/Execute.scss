@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main-page-2{
+    width: 100%;
+    height: calc(100vh - 65px);
+    background-image: url('../images/two.jpg');
+    background-position: 20% 50%;
+    background-attachment: fixed;
+    display: flex;
+    
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    &.tab-select{
+        color: yellow;
+        height: auto;
+    }
+    .data-area{
+        color:#edf2f0;
+        width:80%; //pc
+        width: 100%;
+        // height: 80%;
+        // border-radius: 1rem; //pc
+        background-color: rgba(10, 1, 1,0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media(min-width:768px){
+            width:90%; //pc
+            border-radius: 1rem; //pc
+        }
+        hr{
+            border: 2px white solid;
+            border-radius: 1rem;
+        }
+        h1{
+            margin-top: 2%;
+            font-family: Silverlining-OVjwo;
+            letter-spacing: 2px;
+            font-size: 2rem;
+        }
+        .form-outline{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 2%;
+            .url-btn{
+                margin: 2%;
+            }
+            .form-control{
+                width: 60%;
+                margin: 2%;
+            }
+
+        }
+        .before-url{
+            // height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+        &.after-url{
+            animation: slideDownAnimation 1s ease-in-out;
+        }
+        .after-url{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:#edf2f0;
+            
+        }
+        .image-display{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // min-width: 720px;
+            button{
+                margin: 2% 0 2% 0;
+            }
+            
+        }
+        .tab-select{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .tab-images{
+                display: flex;
+                flex-direction: column-reverse;
+                // flex-direction: row;// pc
+                justify-content: center;
+                align-items: center;
+                margin: 2% 1% 2% 1%;
+                width: 98%;
+                box-shadow: 0 0 3px;
+                input{
+                    margin: 2%;
+                }
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+                @media (min-width:768px){
+                    width: 94%;
+                    margin: 2%;
+                    flex-direction: row;
+                    box-shadow:none;
+                    input{
+                        margin: 1%;
+                    }
+                }
+               
+            }
+            
+            button{
+                margin: 2%;
+            }
+        }
+        .full-tab{
+            width: 100%;
+            .tab-images{
+                margin: 2% 1% 2% 1%;
+                width: 98%;
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                }
+                @media (min-width:768px){
+                    width: 96%;
+                    margin: 2%;
+
+                }
+            }
+            
+
+        }
+    }
+
+}
+.fit-canvas{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes slideDownAnimation {
+    from {
+      transform: translateY(-50%);
+    }
+    to {
+      transform: translateY(0);
+    // height: 50%;
+    }
+  }
+@font-face{
+    font-family: 'Silverlining-OVjwo';
+    src: url('../font/Silverlining-OVjwo.otf')format('opentype');
+}
